@@ -94,6 +94,6 @@ AVRO_TOOLS <- NULL
     Sys.getenv("AVRO_TOOLS")
   }else {
     file.path(system.file("java",package=pkgname),
-              "avro-tools-1.7.4.jar")
+              "avro-tools-1.8.1.jar")
   })
 }
