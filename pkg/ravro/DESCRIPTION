@@ -1,11 +1,11 @@
 Package: ravro
 Type: Package
 Title: Read and write Avro data files from R
-Version: 1.0.6
+Version: 1.0.7
 Date: 2016-11-22
 Author: Jamie F Olson
 Maintainer: David Kincaid <kincaid.dave@gmail.com>
-Description: Read and write Avro data files from R
+Description: Read and write Avro data files from R (updated 1-18-2018 by D.Paschall to generalize AVRO_TOOLS setting and err log file fix for Windows)
 License: Apache License (== 2.0)
 SystemRequirements: Java (>= 1.6)
 Depends:
