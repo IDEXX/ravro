@@ -86,6 +86,9 @@ avro_to_json <- function(input,
               stderr=T)
     else
       system(paste( "java","-jar",AVRO_TOOLS,"tojson",sanitize_path(input), ">", output), intern = TRUE)}
+  
+  err <- err[!as.logical(grep("log4j:WARN", err))]
+  
   if (length(err)>0){
     message(err)
     stop("Error Avro to JSON")

@@ -93,7 +93,13 @@ AVRO_TOOLS <- NULL
   if (Sys.getenv("AVRO_TOOLS")!=""){
     Sys.getenv("AVRO_TOOLS")
   }else {
-    file.path(system.file("java",package=pkgname),
-              "avro-tools-1.8.1.jar")
+    # original code in comments below:
+    # file.path(system.file("java",package=pkgname),
+    #           "avro-tools-1.8.1.jar")
+    
+    # more generalized solution:
+    path_to_jar_file <- file.path(system.file("java",package=pkgname))
+    my_jar_file <- list.files(path_to_jar_file, pattern = ".*tools.*\\.jar")
+    paste0(path_to_jar_file, "/", my_jar_file) 
   })
 }
